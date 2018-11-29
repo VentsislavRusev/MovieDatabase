@@ -4,11 +4,12 @@
 
 <html>
 <head runat="server">
-    <title>Movie Database</title>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<link href="css/main.css" rel="stylesheet" />
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
+	<title>Movie Database</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="css/main.css" rel="stylesheet" />
+	<asp:ContentPlaceHolder ID="head" runat="server">
+	</asp:ContentPlaceHolder>
 </head>
 <body>
 	<nav class="navbar navbar-default">
@@ -23,13 +24,13 @@
 		</div>
 	</nav>
 
-    <form id="MasterPageForm" runat="server">
-        <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">
+	<form id="MasterPageForm" runat="server">
+		<div>
+			<asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">
 			
-            </asp:ContentPlaceHolder>
-        </div>
-    </form>
+			</asp:ContentPlaceHolder>
+		</div>
+	</form>
 
 	<%--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>--%>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

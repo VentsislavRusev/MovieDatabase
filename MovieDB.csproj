@@ -72,6 +72,7 @@
     <Content Include="js\main.js" />
     <Content Include="Movies.aspx" />
     <Content Include="Web.config" />
+    <Content Include="xml\commercials.xml" />
     <Content Include="xml\Project4.xml">
       <SubType>Designer</SubType>
     </Content>
@@ -102,6 +103,7 @@
       <DependentUpon>Movies.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TransformXslt.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="GeneralMasterPage.Master" />

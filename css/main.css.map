@@ -1,7 +1,1 @@
-{
-"version": 3,
-"mappings": "AAAA,EAAG;EACF,KAAK,EAAE,GAAG;;ACDX,EAAG;EACF,cAAc,EAAE,SAAS;;ACG1B,IAAK;EACJ,UAAU,EAAE,MAAM",
-"sources": ["../scss/general.scss","../scss/navigation.scss","../scss/main.scss"],
-"names": [],
-"file": "main.css"
-}
+{"version":3,"sourceRoot":"","sources":["../scss/general.scss","../scss/navigation.scss"],"names":[],"mappings":"AAOA;EACC,YANa;EAOb,OANa;;;AASd;EACC,OAZc;;;ACDd;EACA","file":"main.css"}

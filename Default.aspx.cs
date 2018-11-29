@@ -16,19 +16,13 @@ namespace MovieDB
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
-			#region XSLT
-			//// if xml uses a namespace xslt must refer to this namespace
-			//string sourcefile = HttpContext.Current.Server.MapPath("xml/Project4.xml");
-			//string xslfile = HttpContext.Current.Server.MapPath("xslt/commercial.xslt");
-			//string destinationFile = HttpContext.Current.Server.MapPath("xml/commercials.xml");
+			#region XSLT Transform
+			string sourcefile = HttpContext.Current.Server.MapPath("xml/Project4.xml");
+			string xsltfile = HttpContext.Current.Server.MapPath("xslt/commercial.xslt");
+			string destination = HttpContext.Current.Server.MapPath("xml/commercials.xml");
 
-			////xml
-			//FileStream fs = new FileStream(destinationFile, FileMode.Create);
-			//XslCompiledTransform xct = new XslCompiledTransform();
-			//xct.Load(xslfile);
-			////xml
-			//xct.Transform(sourcefile, null, fs);
-			//fs.Close();
+			TransformXslt transform = new TransformXslt(sourcefile, xsltfile, destination);
+			transform.TransformXml();
 			#endregion
 		}
 	}

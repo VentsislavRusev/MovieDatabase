@@ -1,3 +1,15 @@
-﻿h1 {
-	color: red;
+﻿// Colors
+$yellow-color: #FFEB3B;
+$black-color: #212112;
+$white-color: #FFF;
+$grey-color: #BDBDBD;
+$red-color: #FF5252;
+
+body {
+	background: $black-color;
+	color: $white-color;
+}
+
+h1 {
+	color: $yellow-color;
 }
