@@ -11,9 +11,22 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="Default.aspx">LOGO</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li><a href="Default.aspx">Best Rated</a></li>
+				<li><a href="Movies.aspx">Movies</a></li>
+			</ul>
+		</div>
+	</nav>
+
     <form id="MasterPageForm" runat="server">
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">
+			
             </asp:ContentPlaceHolder>
         </div>
     </form>
