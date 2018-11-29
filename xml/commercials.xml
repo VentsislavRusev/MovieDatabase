@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publications xmlns:c="http://my.company.com">
+  <commercial>
+    <company>Yensid Tlaw</company>
+    <website>www.myfantasy.com</website>
+    <logo>logo1.jpg</logo>
+  </commercial>
+  <commercial>
+    <company>Tinycomp</company>
+    <website>www.myhugo.com</website>
+    <logo>logo2.jpg</logo>
+  </commercial>
+  <commercial>
+    <company>Cartoons</company>
+    <website>www.lotsofcartoons.com</website>
+    <logo>logo3.jpg</logo>
+  </commercial>
+  <commercial>
+    <company>Web Developers</company>
+    <website>www.superstudents.com</website>
+    <logo>logo4.jpg</logo>
+  </commercial>
+</publications>
