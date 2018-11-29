@@ -16,14 +16,19 @@ namespace MovieDB
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
-			#region XSLT Transform
+			TransformUsingXslt();
+		}
+
+		#region XSLT Transform
+		public void TransformUsingXslt()
+		{
 			string sourcefile = HttpContext.Current.Server.MapPath("xml/Project4.xml");
 			string xsltfile = HttpContext.Current.Server.MapPath("xslt/commercial.xslt");
 			string destination = HttpContext.Current.Server.MapPath("xml/commercials.xml");
 
 			TransformXslt transform = new TransformXslt(sourcefile, xsltfile, destination);
 			transform.TransformXml();
-			#endregion
 		}
+		#endregion
 	}
 }

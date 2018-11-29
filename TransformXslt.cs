@@ -5,15 +5,15 @@ namespace MovieDB
 {
 	public class TransformXslt
 	{
-		public string XmlFile { get; set; }
-		public string XsltFile { get; set; }
-		public string Destination { get; set; }
+		private string XmlFile { get; set; }
+		private string XsltFile { get; set; }
+		private string Destination { get; set; }
 
 		public TransformXslt(string xml, string xslt, string destination)
 		{
-			this.XmlFile = xml;
-			this.XsltFile = xslt;
-			this.Destination = destination;
+			XmlFile = xml;
+			XsltFile = xslt;
+			Destination = destination;
 		}
 
 		public void TransformXml()

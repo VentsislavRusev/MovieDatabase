@@ -72,7 +72,9 @@
     <Content Include="js\main.js" />
     <Content Include="Movies.aspx" />
     <Content Include="Web.config" />
-    <Content Include="xml\commercials.xml" />
+    <Content Include="xml\commercials.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="xml\Project4.xml">
       <SubType>Designer</SubType>
     </Content>
