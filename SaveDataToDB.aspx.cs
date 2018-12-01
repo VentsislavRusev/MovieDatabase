@@ -16,10 +16,10 @@ namespace MovieDB
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
-			ReadDataToJSON();
+			ReadDataToXML();
 		}
 
-		public void ReadDataToJSON()
+		public void ReadDataToXML()
 		{
 			//string ConnString = @"data source = DESKTOP-S37VJ5K\MSSQLSERVER01; integrated security = true; database = MovieDB";
 			string ConnString = @"data source = DESKTOP-DJ7RAJ3; integrated security = true; database = MovieDB";
