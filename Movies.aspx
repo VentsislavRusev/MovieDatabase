@@ -25,15 +25,15 @@
 				<p>Poster</p>
 				<p>Title</p>
 			</div>
-						<div class="col-xs-6 col-sm-3">
+			<div class="col-xs-6 col-sm-3">
 				<p>Poster</p>
 				<p>Title</p>
 			</div>
-						<div class="col-xs-6 col-sm-3">
+			<div class="col-xs-6 col-sm-3">
 				<p>Poster</p>
 				<p>Title</p>
 			</div>
-						<div class="col-xs-6 col-sm-3">
+			<div class="col-xs-6 col-sm-3">
 				<p>Poster</p>
 				<p>Title</p>
 			</div>

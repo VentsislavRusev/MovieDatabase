@@ -16,7 +16,8 @@ namespace MovieDB
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
-			TransformUsingXslt();
+			// Method to call XSLT for reformatting XML
+			//TransformUsingXslt();
 		}
 
 		#region XSLT Transform
