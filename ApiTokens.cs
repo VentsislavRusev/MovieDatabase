@@ -5,8 +5,8 @@ using System.Web;
 
 namespace MovieDB
 {
-	public class Omdb
+	public class ApiTokens
 	{
-		public static string token = "670e75a5";
+		public static string omdb = "670e75a5";
 	}
 }

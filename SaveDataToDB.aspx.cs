@@ -22,8 +22,8 @@ namespace MovieDB
 		public void ReadDataToXML()
 		{
 			//string ConnString = @"data source = DESKTOP-S37VJ5K\MSSQLSERVER01; integrated security = true; database = MovieDB";
-			string ConnString = @"data source = DESKTOP-DJ7RAJ3; integrated security = true; database = MovieDB";
-			SqlConnection conn = new SqlConnection(ConnString);
+			string connString = @"data source = DESKTOP-RGPRP90\THOMASSQL; integrated security = true; database = MovieDB";
+			SqlConnection conn = new SqlConnection(connString);
 			SqlCommand cmd = new SqlCommand
 			{
 				Connection = conn,
@@ -48,7 +48,7 @@ namespace MovieDB
 					msg_lb.Text = row["MovieName"].ToString();
 					string reformattedName = msg_lb.Text.Replace(" ", "%20");
 
-					string url = "http://www.omdbapi.com/?t=" + reformattedName + "&r=xml&apikey=" + Omdb.token;
+					string url = "http://www.omdbapi.com/?t=" + reformattedName + "&r=xml&apikey=" + ApiTokens.omdb;
 					string result = client.DownloadString(url);
 
 					File.WriteAllText(Server.MapPath("~/xml/Movies.xml"), result);
@@ -82,9 +82,8 @@ namespace MovieDB
 						msg_lb.Text = "Nothing found";
 					}
 
-					break;
-					// Take each movie property and save in the DB		
-
+					// Take each movie property and save in the DB	
+					UpdateDbWithDataFromXml(connString, poster, plot, actors, rating);
 				}
 			}
 			catch (Exception ex)
@@ -96,5 +95,24 @@ namespace MovieDB
 				conn.Close();
 			}
 		}	
+		public void UpdateDbWithDataFromXml(string connString, string poster, string plot, string actors, string rating)
+		{
+			SqlConnection conn = new SqlConnection(connString);
+			SqlDataAdapter da = new SqlDataAdapter();
+			string sql = "UPDATE Movies SET [PosterUrl] = @poster, [Resume] = @plot, [Actors] = @actors, [Rating] = @rating WHERE [MovieName] = @title";
+			SqlCommand updateCmd = new SqlCommand(sql, conn);
+
+			conn.Open();
+			updateCmd.Parameters.AddWithValue("@poster", poster);
+			updateCmd.Parameters.AddWithValue("@plot", plot);
+			updateCmd.Parameters.AddWithValue("@actors", actors);
+			updateCmd.Parameters.AddWithValue("@rating", rating);
+			updateCmd.Parameters.AddWithValue("@title", msg_lb.Text);
+
+			da.UpdateCommand = updateCmd;
+			da.UpdateCommand.ExecuteNonQuery();
+
+			conn.Close();
+		}
 	}
 }
