@@ -99,8 +99,12 @@ namespace MovieDB
 		{
 			SqlConnection conn = new SqlConnection(connString);
 			SqlDataAdapter da = new SqlDataAdapter();
-			string sql = "UPDATE Movies SET [PosterUrl] = @poster, [Resume] = @plot, [Actors] = @actors, [Rating] = @rating WHERE [MovieName] = @title";
-			SqlCommand updateCmd = new SqlCommand(sql, conn);
+			//string sql = "UPDATE Movies SET [PosterUrl] = @poster, [Resume] = @plot, [Actors] = @actors, [Rating] = @rating WHERE [MovieName] = @title";
+			string sql = "spMovies_UpdateColsInDB";
+			SqlCommand updateCmd = new SqlCommand(sql, conn)
+			{
+				CommandType = CommandType.StoredProcedure
+			};
 
 			conn.Open();
 			updateCmd.Parameters.AddWithValue("@poster", poster);
