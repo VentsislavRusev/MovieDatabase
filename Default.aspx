@@ -43,9 +43,6 @@
 						<div class="col-xs-12 col-sm-4 text-center">
 				<p>Company</p>
 				<p>Commercial</p>
-							<p>
-								<asp:Label ID="msg_lb" runat="server" Text="Label"></asp:Label>
-							</p>
 			</div>
 		</div>
 	</div>
