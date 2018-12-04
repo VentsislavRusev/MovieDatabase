@@ -34,6 +34,12 @@ nav {
   background: #FFF;
   width: 100%;
   border-bottom: 1px solid #BDBDBD;
+  margin-top: -1em;
+}
+nav li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 nav a {
   color: #FF5252;
@@ -59,6 +65,23 @@ nav a.logo {
 }
 nav a.logo:hover {
   text-decoration: none;
+}
+
+.show-menu {
+  display: block;
+}
+
+.nav-margin {
+  margin-bottom: 100px;
+}
+
+.burger-icon {
+  color: #FF5252;
+  float: right;
+  font-size: 2em;
+  margin: 0.25em 1em 0 0;
+  display: none;
+  cursor: pointer;
 }
 
 /* All the rest */
@@ -116,6 +139,29 @@ nav a.logo:hover {
 .movie-box .movies-title {
   font-size: 1.3em;
   padding: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  .burger-icon {
+    display: block;
+    margin-top: 0.5em;
+  }
+
+  nav ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: none;
+  }
+  nav #nav-items a {
+    text-align: center;
+    width: 100%;
+    background: #FFF;
+    margin: 0;
+  }
+  nav ul li a.logo {
+    display: none !important;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

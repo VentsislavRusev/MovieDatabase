@@ -11,7 +11,12 @@ nav {
 	background: $white-color;
 	width: 100%;
 	border-bottom: 1px solid $grey-color;
-
+	margin-top: -1em;
+	li {
+		list-style-type: none;
+		margin: 0;
+		padding:  0;
+	}
 	a {
 		color: $red-color;
 		display: block;
@@ -41,5 +46,24 @@ nav {
 		text-decoration: none;
 	}
 }
+
+.show-menu {
+	display: block;
+}
+
+.nav-margin {
+	margin-bottom: 100px; 
+}
+
+.burger-icon {
+	color: $red-color;
+	float: right;
+	font-size: 2em;
+	margin: .25em 1em 0 0;
+	display: none;
+	cursor: pointer;
+}
+
+
 
 /* All the rest */

@@ -1,0 +1,32 @@
+﻿$black-color: #212112;
+$white-color: #FFF;
+$grey-color: #BDBDBD;
+$red-color: #FF5252;
+
+@media only screen and (max-width: 600px) {
+	.burger-icon {
+		display: block;
+		margin-top: 0.5em;
+	}
+
+	nav {
+
+		ul {
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			display: none;
+		}
+
+		#nav-items a {
+			text-align: center;
+			width: 100%;
+			background: $white-color;
+			margin: 0;
+		}
+
+		ul li a.logo {
+			display: none !important;
+		}
+	}
+}
