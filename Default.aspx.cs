@@ -15,25 +15,30 @@ namespace MovieDB
 {
 	public partial class Default : System.Web.UI.Page
 	{
+		// If Needed
+		// HttpContext.Current.Server.MapPath("xml / Project4.xml")
 		protected void Page_Load(object sender, EventArgs e)
 		{
 			int days = 1000 * 60 * 60 * 24 * 7;
 			var timer = new System.Threading.Timer(DayTimerCall, null, 0, days);
-			XmlManipulating manipulate = new XmlManipulating();
-			// Method to call XSLT for reformatting XML
-			//TransformUsingXslt();
-
-			// manipulate xml and sent to DB
-			//manipulate.ReadDataToXMLFromOmdb();
 		}
-
+		#region Method being called every 7 day
 		private static void DayTimerCall(object o)
 		{
-			Console.WriteLine(DateTime.Now);
+			// Test in the Output window
+			// System.Diagnostics.Debug.WriteLine(DateTime.Now);
+
+			// Method to call XSLT for reformatting XML
+			TransformUsingXslt();
+
+			// manipulate xml and sent to DB
+			XmlManipulating manipulate = new XmlManipulating();
+			manipulate.ReadDataToXMLFromOmdb();
 		}
+		#endregion
 
 		#region XSLT Transform
-		public void TransformUsingXslt()
+		public static void TransformUsingXslt()
 		{
 			string sourcefile = HttpContext.Current.Server.MapPath("xml/Project4.xml");
 			string xsltfile = HttpContext.Current.Server.MapPath("xslt/commercial.xslt");
@@ -43,5 +48,6 @@ namespace MovieDB
 			transform.TransformXml();
 		}
 		#endregion
+
 	}
 }
