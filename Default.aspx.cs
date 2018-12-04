@@ -9,6 +9,7 @@ using System.Xml;
 using System.Xml.Xsl;
 using System.Data;
 using System.Net;
+using System.Timers;
 
 namespace MovieDB
 {
@@ -16,8 +17,19 @@ namespace MovieDB
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
+			int days = 1000 * 60 * 60 * 24 * 7;
+			var timer = new System.Threading.Timer(DayTimerCall, null, 0, days);
+			XmlManipulating manipulate = new XmlManipulating();
 			// Method to call XSLT for reformatting XML
 			//TransformUsingXslt();
+
+			// manipulate xml and sent to DB
+			//manipulate.ReadDataToXMLFromOmdb();
+		}
+
+		private static void DayTimerCall(object o)
+		{
+			Console.WriteLine(DateTime.Now);
 		}
 
 		#region XSLT Transform
