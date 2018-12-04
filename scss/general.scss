@@ -1,15 +1,39 @@
 ﻿// Colors
-$yellow-color: #FFEB3B;
+//$yellow-color: #FFEB3B;
 $black-color: #212112;
 $white-color: #FFF;
 $grey-color: #BDBDBD;
 $red-color: #FF5252;
+// Fonts
+$header-font: 'Rokkitt', serif;
+$text-font: 'Roboto', sans-serif;
+/* General Settings */
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100vh;
+} 
 
 body {
 	background: $black-color;
 	color: $white-color;
 }
 
-h1 {
-	color: $yellow-color;
+h1, h2, h3, h4, h5, h6 {
+	font-family: $header-font;
 }
+
+p, a {
+	font-family: $text-font;
+}
+
+a, button {
+	font-weight: bold;
+}
+
+p {
+	color: $black-color;
+}
+

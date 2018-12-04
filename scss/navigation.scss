@@ -1,3 +1,45 @@
-﻿h1 {
-	text-transform: uppercase;
+﻿//$yellow-color: #FFEB3B;
+$black-color: #212112;
+$white-color: #FFF;
+$grey-color: #BDBDBD;
+$red-color: #FF5252;
+
+/* Navigation */
+
+nav {
+	height: 4em;
+	background: $white-color;
+	width: 100%;
+	border-bottom: 1px solid $grey-color;
+
+	a {
+		color: $red-color;
+		display: block;
+		float: left;
+		padding: 20px 10px;
+		text-decoration: none;
+		text-transform: uppercase;
+		margin-right: 1em;
+	}
+
+	a:hover {
+		text-decoration: underline;
+		color: $red-color;
+	}
+
+	a.logo {
+		font-size: 30px;
+		letter-spacing: -2px;
+		text-shadow: 1px 1px 2px $black-color;
+		padding-left: 20px;
+		padding-right: 40px;
+		margin-right: 10px;
+		margin-top: -15px;
+	}
+
+	a.logo:hover {
+		text-decoration: none;
+	}
 }
+
+/* All the rest */

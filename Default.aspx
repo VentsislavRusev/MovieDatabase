@@ -3,6 +3,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
 	<div class="container">
+		<div class="wrapper">
+
 		<div class="row">
 			<div class="col-xs-12">
 				<table class="table">
@@ -24,8 +26,8 @@
 							<td>1999</td>
 							<td>Some story about batman defeating fellons</td>
 							<td>7.8</td>
-							<td>5</td>
-							<td><button type="button" class="btn btn-success">View</button></td>
+							<td>@DateTime.Now</td>
+							<td><button type="button" class="view-btn">View</button></td>
 						</tr>
 					</tbody>
 				</table>
@@ -44,6 +46,7 @@
 				<p>Company</p>
 				<p>Commercial</p>
 			</div>
+		</div>
 		</div>
 	</div>
 </asp:Content>

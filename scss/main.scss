@@ -1,4 +1,69 @@
-﻿@import "general.scss";
+﻿//$yellow-color: #FFEB3B;
+$black-color: #212112;
+$white-color: #FFF;
+$grey-color: #BDBDBD;
+$red-color: #FF5252;
+
+@import "general.scss";
 @import "navigation.scss";
 
 // All the other stuff
+.background-img {
+	background-image: url('../images/bgimg.jpeg');
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0.3;
+	position:absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	z-index: -99;
+}
+
+.wrapper {
+	width: 100%;
+	border: 1px solid $grey-color;
+	margin-top: 3em;
+	background: $white-color;
+	opacity: 0.7;
+
+	.row {
+		padding: 1em 2em;
+		table {
+			color: $black-color;
+		}
+	}
+}
+
+.view-btn {
+	padding: 0.3em 1.5em;
+	border: 1px solid $red-color;
+	background: $red-color;
+	color: $white-color;
+	text-transform: uppercase;
+}
+
+.view-btn:hover, .view-btn:focus {
+	outline: none;
+	color: $red-color;
+	background: $white-color;
+}
+
+.movie-box {
+	padding: 5px 5px;
+	margin: 0 2.5%;
+	width: 20%;
+
+	.movies-img {
+		height: 200px;
+	}
+
+	.movies-title {
+		font-size: 1.3em;
+		padding: 5px;
+	}
+}
+

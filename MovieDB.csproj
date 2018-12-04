@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="css\main.css" />
     <Content Include="Default.aspx" />
+    <Content Include="images\bgimg.jpeg" />
     <Content Include="js\main.js" />
     <Content Include="Movies.aspx" />
     <Content Include="Web.config" />
@@ -122,9 +123,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="images\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
