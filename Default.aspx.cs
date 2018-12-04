@@ -39,9 +39,10 @@ namespace MovieDB
 		#region XSLT Transform
 		public static void TransformUsingXslt()
 		{
-			string sourcefile = HttpContext.Current.Server.MapPath("xml/Project4.xml");
-			string xsltfile = HttpContext.Current.Server.MapPath("xslt/commercial.xslt");
-			string destination = HttpContext.Current.Server.MapPath("xml/commercials.xml");
+			
+			string sourcefile = Path.Combine(HttpRuntime.AppDomainAppPath, "xml/Project4.xml");
+			string xsltfile = Path.Combine(HttpRuntime.AppDomainAppPath, "xslt/commercial.xslt");
+			string destination = Path.Combine(HttpRuntime.AppDomainAppPath, "xml/commercials.xml"); 
 
 			TransformXslt transform = new TransformXslt(sourcefile, xsltfile, destination);
 			transform.TransformXml();
