@@ -15,9 +15,12 @@ namespace MovieDB
 { 
 	public partial class Default : System.Web.UI.Page
 	{
+		// If Needed
+		// HttpContext.Current.Server.MapPath("xml / Project4.xml")
 		protected void Page_Load(object sender, EventArgs e)
 		{
 			int days = 1000 * 60 * 60 * 24 * 7;
+
 			System.Threading.Timer Timer = new System.Threading.Timer(DayTimerCall, null, 0, days);
 		}
 
