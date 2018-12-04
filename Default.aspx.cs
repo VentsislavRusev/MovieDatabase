@@ -18,22 +18,21 @@ namespace MovieDB
 		protected void Page_Load(object sender, EventArgs e)
 		{
 			int days = 1000 * 60 * 60 * 24 * 7;
-			var timer = new System.Threading.Timer(DayTimerCall, null, 0, days);
-			XmlManipulating manipulate = new XmlManipulating();
-			// Method to call XSLT for reformatting XML
-			//TransformUsingXslt();
-
-			// manipulate xml and sent to DB
-			//manipulate.ReadDataToXMLFromOmdb();
+			System.Threading.Timer Timer = new System.Threading.Timer(DayTimerCall, null, 0, days);
 		}
 
 		private static void DayTimerCall(object o)
 		{
-			Console.WriteLine(DateTime.Now);
+			//System.Diagnostics.Debug.Write(WRITE TO THE OUTPUT);
+
+			TransformUsingXslt();
+
+			XmlManipulating manipulate = new XmlManipulating();
+			manipulate.ReadDataToXMLFromOmdb();
 		}
 
 		#region XSLT Transform
-		public void TransformUsingXslt()
+		public static void TransformUsingXslt()
 		{
 			string sourcefile = HttpContext.Current.Server.MapPath("xml/Project4.xml");
 			string xsltfile = HttpContext.Current.Server.MapPath("xslt/commercial.xslt");
