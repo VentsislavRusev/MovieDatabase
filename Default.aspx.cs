@@ -9,6 +9,7 @@ using System.Xml;
 using System.Xml.Xsl;
 using System.Data;
 using System.Net;
+using System.Timers;
 
 namespace MovieDB
 {
@@ -16,12 +17,24 @@ namespace MovieDB
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
-			// Method to call XSLT for reformatting XML
-			//TransformUsingXslt();
+			int days = 1000 * 60 * 60 * 24 * 7;
+			System.Threading.Timer Timer = new System.Threading.Timer(DayTimerCall, null, 0, days);
 		}
 
+		#region method called every 7 days
+		private static void DayTimerCall(object o)
+		{
+			//System.Diagnostics.Debug.Write(WRITE TO THE OUTPUT);
+
+			TransformUsingXslt();
+
+			XmlManipulating manipulate = new XmlManipulating();
+			manipulate.ReadDataToXMLFromOmdb();
+		}
+		#endregion
+
 		#region XSLT Transform
-		public void TransformUsingXslt()
+		public static void TransformUsingXslt()
 		{
 			string sourcefile = HttpContext.Current.Server.MapPath("xml/Project4.xml");
 			string xsltfile = HttpContext.Current.Server.MapPath("xslt/commercial.xslt");
