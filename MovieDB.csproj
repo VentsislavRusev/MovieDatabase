@@ -104,8 +104,10 @@
     <Compile Include="Movies.aspx.designer.cs">
       <DependentUpon>Movies.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ApiTokens.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TransformXslt.cs" />
+    <Compile Include="XmlManipulating.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="GeneralMasterPage.Master" />
