@@ -142,6 +142,7 @@ nav a.logo:hover {
   padding: 5px;
 }
 
+/* Animation */
 .ripple {
   background-color: rgba(255, 235, 59, 0.6);
   border-radius: 50%;
@@ -155,6 +156,7 @@ nav a.logo:hover {
     transform: scale(1.5);
   }
 }
+/* Responsive */
 @media only screen and (max-width: 600px) {
   .burger-icon {
     display: block;
