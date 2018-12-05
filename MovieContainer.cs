@@ -9,22 +9,23 @@ using System.Web.UI.WebControls;
 
 namespace MovieDB
 {
-	public class MovieDisplay
+	public class MovieContainer
 	{
 		private string MovieName { get; set; }
 		private string Poster { get; set; }
 
-		public MovieDisplay(string movie, string poster)
+		public MovieContainer(string movie, string poster)
 		{
 			MovieName = movie;
 			Poster = poster;
 		}
 
-		public static List<MovieDisplay> MovieInfo()
+		public static List<MovieContainer> MovieInfo()
 		{
-			List<MovieDisplay> results = new List<MovieDisplay>();
-
-			using (SqlConnection conn = new SqlConnection(@"data source = DESKTOP-DJ7RAJ3; integrated security = true; database = MovieDB"))
+			List<MovieContainer> results = new List<MovieContainer>();
+			//@"data source = DESKTOP-DJ7RAJ3; integrated security = true; database = MovieDB" -> Laptop
+			//@"data source = DESKTOP-RGPRP90\THOMASSQL; integrated security = true; database = MovieDB" -> Desktop
+			using (SqlConnection conn = new SqlConnection(@"data source = DESKTOP-RGPRP90\THOMASSQL; integrated security = true; database = MovieDB"))
 			{
 				conn.Open();
 				SqlCommand cmd = new SqlCommand("spMovies_GetTitleAndPoster", conn);
@@ -36,7 +37,7 @@ namespace MovieDB
 
 				foreach (DataRow row in dt.Rows)
 				{
-					results.Add(new MovieDisplay(row["MovieName"].ToString(), row["PosterUrl"].ToString()));
+					results.Add(new MovieContainer(row["MovieName"].ToString(), row["PosterUrl"].ToString()));
 				}
 
 				#region comments
