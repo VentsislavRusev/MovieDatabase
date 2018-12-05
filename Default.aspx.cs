@@ -19,9 +19,9 @@ namespace MovieDB
 		// HttpContext.Current.Server.MapPath("xml / Project4.xml")
 		protected void Page_Load(object sender, EventArgs e)
 		{
-			int days = 1000 * 60 * 60 * 24 * 7;
+			//int days = 1000 * 60 * 60 * 24 * 7;
 
-			System.Threading.Timer Timer = new System.Threading.Timer(DayTimerCall, null, 0, days);
+			//System.Threading.Timer Timer = new System.Threading.Timer(DayTimerCall, null, 0, days);
 		}
 
 		#region method called every 7 days

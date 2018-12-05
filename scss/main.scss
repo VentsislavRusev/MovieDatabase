@@ -28,7 +28,7 @@ $red-color: #FF5252;
 	border: 1px solid $grey-color;
 	margin-top: 3em;
 	background: $white-color;
-	opacity: 0.7;
+	/*opacity: 0.7;*/
 
 	.row {
 		padding: 1em 2em;
@@ -58,7 +58,7 @@ $red-color: #FF5252;
 	width: 20%;
 
 	.movies-img {
-		height: 200px;
+		width: 100%;
 	}
 
 	.movies-title {

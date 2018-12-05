@@ -11,7 +11,8 @@ namespace MovieDB
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
-
+			//MovieDisplay a = new MovieDisplay();
+			List<MovieDisplay> MovieInfoList = MovieDisplay.MovieInfo();
 		}
 	}
 }
