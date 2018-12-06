@@ -13,13 +13,31 @@ namespace MovieDB {
     public partial class Movies {
         
         /// <summary>
-        /// msg_lb control.
+        /// Genrelist control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label msg_lb;
+        protected global::System.Web.UI.WebControls.DropDownList Genrelist;
+        
+        /// <summary>
+        /// Moviename_tb control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Moviename_tb;
+        
+        /// <summary>
+        /// Search_btn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Search_btn;
         
         /// <summary>
         /// MovieList_lw control.
@@ -29,5 +47,14 @@ namespace MovieDB {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ListView MovieList_lw;
+        
+        /// <summary>
+        /// DS_MoviesAndPoster control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource DS_MoviesAndPoster;
     }
 }
