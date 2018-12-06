@@ -15,13 +15,10 @@ namespace MovieDB
 { 
 	public partial class Default : System.Web.UI.Page
 	{
-		// If Needed
-		// HttpContext.Current.Server.MapPath("xml / Project4.xml")
 		protected void Page_Load(object sender, EventArgs e)
 		{
-			//int days = 1000 * 60 * 60 * 24 * 7;
-			//DayTimerCall();
-			//System.Threading.Timer Timer = new System.Threading.Timer(DayTimerCall, null, 0, days);
+			// XSLT transform and xml data to DB
+			// DayTimerCall();
 		}
 
 		#region method called every 7 days

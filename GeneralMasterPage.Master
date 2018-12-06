@@ -14,8 +14,8 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <div class="burger-icon"><span><i class="fa fa-bars"></i></span></div>
     <nav id="custom-nav">
+    <div class="burger-icon"><span><i class="fa fa-bars"></i></span></div>
         <ul id="nav-items">
             <li><a class="logo" href="Default.aspx">Movies 'N' Stuff</a></li>
             <li><a href="Default.aspx">Best Rated</a></li>

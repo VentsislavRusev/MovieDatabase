@@ -5,6 +5,9 @@ using System.Net;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
+using System.Data.Sql;
+using System.Data.SqlClient;
 
 namespace MovieDB
 {
@@ -12,28 +15,54 @@ namespace MovieDB
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
-			List<MovieContainer> MovieInfoList = MovieContainer.MovieInfo();
+			PopulateListView(MovieContainer.MovieInfo());
 		}
 
 		protected void Search_btn_Click(object sender, EventArgs e)
 		{
 			if (Genrelist.SelectedValue != "Select Genre" && !string.IsNullOrEmpty(Moviename_tb.Text))
 			{
-				Moviename_tb.Text = "search genre and movie";
+				ClearListView();
+
+				int genre = Genrelist.SelectedIndex;
+				string title = Moviename_tb.Text;
+
+				PopulateListView(MovieContainer.MovieByNameAndGenre(genre, title));
 			} 
 			else if (Genrelist.SelectedValue != "Select Genre" && string.IsNullOrEmpty(Moviename_tb.Text))
 			{
-				Moviename_tb.Text = "genre";
+				ClearListView();
+
+				int genre = Genrelist.SelectedIndex;
+				
+				PopulateListView(MovieContainer.MovieByGenre(genre));
 			}
 			else if (Genrelist.SelectedValue == "Select Genre" && !string.IsNullOrEmpty(Moviename_tb.Text))
 			{
-				Moviename_tb.Text = "Search movie";
+				ClearListView();
+
+				string title = Moviename_tb.Text;
+
+				PopulateListView(MovieContainer.MovieByName(title));
 			}
 			else
 			{
-				Moviename_tb.Text = "Nothing selected";
 				return;
 			}
+		}
+
+		public void PopulateListView(List<MovieContainer> data)
+		{
+			List<MovieContainer> MovieInfoList = data;
+
+			MovieList_lw.DataSource = MovieInfoList;
+			MovieList_lw.DataBind();
+		}
+
+		public void ClearListView()
+		{
+			MovieList_lw.DataSource = null;
+			MovieList_lw.DataBind();
 		}
 	}
 }

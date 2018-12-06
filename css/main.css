@@ -1,74 +1,102 @@
 /* General Settings */
 *, *:before, *:after {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 html, body {
-  height: auto; }
+  height: auto;
+}
 
 body {
   background: #212112;
-  color: #FFF; }
+  color: #FFF;
+}
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Rokkitt", serif; }
+  font-family: "Rokkitt", serif;
+}
 
 p, a {
-  font-family: "Roboto", sans-serif; }
+  font-family: "Roboto", sans-serif;
+}
 
 a, button {
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 p {
-  color: #212112; }
+  color: #212112;
+}
+
+img {
+  width: 100%;
+  background: #FF5252;
+}
 
 /* Navigation */
 nav {
-  height: 4em;
+  height: 5em;
   background: #FFF;
   width: 100%;
   border-bottom: 1px solid #BDBDBD;
-  margin-top: -1em; }
-  nav li {
-    list-style-type: none;
-    margin: 0;
-    padding: 0; }
-  nav a {
-    color: #FF5252;
-    display: block;
-    float: left;
-    padding: 20px 10px;
-    text-decoration: none;
-    text-transform: uppercase;
-    margin-right: 1em; }
-  nav a:hover {
-    text-decoration: underline;
-    color: #FF5252; }
-  nav a.logo {
-    font-size: 30px;
-    letter-spacing: -2px;
-    text-shadow: 1px 1px 2px #212112;
-    padding-left: 20px;
-    padding-right: 40px;
-    margin-right: 10px;
-    margin-top: -15px; }
-  nav a.logo:hover {
-    text-decoration: none; }
+  margin-top: -1em;
+  position: fixed;
+  z-index: 100;
+}
+nav li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+nav a {
+  color: #FF5252;
+  display: block;
+  float: left;
+  padding: 20px 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-right: 1em;
+  margin-top: 10px;
+}
+nav a:hover {
+  text-decoration: underline;
+  color: #FF5252;
+}
+nav a.logo {
+  font-size: 30px;
+  letter-spacing: -2px;
+  text-shadow: 1px 1px 2px #212112;
+  padding-left: 20px;
+  padding-right: 40px;
+  margin-right: 10px;
+  margin-top: 0;
+}
+nav a.logo:hover {
+  text-decoration: none;
+}
 
 .show-menu {
-  display: block; }
+  display: block;
+}
 
 .nav-margin {
-  margin-bottom: 100px; }
+  margin-bottom: 100px;
+}
 
 .burger-icon {
   color: #FF5252;
   float: right;
   font-size: 2em;
-  margin: .25em 1em 0 0;
+  margin: 0.75em 1em 0 0 !important;
   display: none;
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 /* All the rest */
+img:hover {
+  opacity: 0.5;
+}
+
 .background-img {
   background-image: url("../images/bgimg.jpeg");
   height: 100%;
@@ -81,74 +109,79 @@ nav {
   bottom: 0;
   right: 0;
   left: 0;
-  z-index: -99; }
+  z-index: -99;
+}
 
 .wrapper {
   width: 100%;
   border: 1px solid #BDBDBD;
   border-radius: 6px;
-  margin-top: 2em;
+  margin-top: 6em;
   margin-bottom: 2em;
   background: #FFF;
-  /*opacity: 0.7;*/ }
-  .wrapper .row {
-    padding: 1em 2em; }
-    .wrapper .row table {
-      color: #212112; }
+  z-index: 200;
+  /*opacity: 0.7;*/
+}
+.wrapper .row {
+  padding: 1em 2em;
+}
+.wrapper .row table {
+  color: #212112;
+}
 
 .movies-title {
-  text-align: center; }
+  text-align: center;
+}
 
 .view-btn, search-btn {
   padding: 0.3em 1.5em;
   border: 1px solid #FF5252;
   background: #FF5252;
   color: #FFF;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+}
 
 .view-btn:hover, .view-btn:focus, .search-btn:hover, search-btn:focus {
   outline: none;
   color: #FF5252;
-  background: #FFF; }
+  background: #FFF;
+}
 
 .movie-box {
   padding: 5px 5px;
   margin: 0 2.5%;
-  width: 20%; }
-  .movie-box .movies-img {
-    width: 100%; }
-  .movie-box .movies-title {
-    font-size: 1.3em;
-    padding: 5px; }
+  width: 20%;
+}
+.movie-box .movies-img {
+  width: 100%;
+}
+.movie-box .movies-title {
+  font-size: 1.3em;
+  padding: 5px;
+}
 
-/* Animation */
-.ripple {
-  background-color: rgba(255, 235, 59, 0.6);
-  border-radius: 50%;
-  position: absolute;
-  transform: scale(0);
-  animation: ripple 0.3s linear; }
-
-@keyframes ripple {
-  to {
-    transform: scale(1.5); } }
 /* Responsive */
 @media only screen and (max-width: 600px) {
   .burger-icon {
     display: block;
-    margin-top: 0.5em; }
+    margin-top: 0.5em;
+  }
 
   nav ul {
     margin: 0;
     padding: 0;
     width: 100%;
-    display: none; }
+    display: none;
+  }
   nav #nav-items a {
     text-align: center;
     width: 100%;
     background: #FFF;
-    margin: 0; }
+    margin: 0;
+  }
   nav ul li a.logo {
-    display: none !important; } }
+    display: none !important;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */

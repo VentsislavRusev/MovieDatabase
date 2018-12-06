@@ -47,14 +47,5 @@ namespace MovieDB {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ListView MovieList_lw;
-        
-        /// <summary>
-        /// DS_MoviesAndPoster control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource DS_MoviesAndPoster;
     }
 }
