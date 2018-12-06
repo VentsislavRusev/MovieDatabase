@@ -26,10 +26,14 @@
 					<ItemTemplate>
 						<div class="column">
 							<div class="col-xs-6 col-sm-3">
-								<td runat="server">
-									<asp:Image ID="PosterUrlLabel" runat="server" ImageUrl='<%# Bind("Poster") %>' AlternateText="Movieposter" Height="15em" Width="100%"/>
-									<p><asp:Label ID="MovieNameLabel" runat="server" Text='<%# Eval("MovieName") %>' /></p>
-								</td>
+								<a class="modal-link">
+									<div class="card">
+										<td runat="server">
+											<asp:Image CssClass="card-img-top" ID="PosterUrlLabel" runat="server" ImageUrl='<%# Bind("Poster") %>' AlternateText="Movieposter" Height="15em" Width="100%"/>
+											<p class="card-text"><asp:Label ID="MovieNameLabel" runat="server" Text='<%# Eval("MovieName") %>' /></p>
+										</td>
+									</div>
+								</a>
 							</div>
 						</div>
 					</ItemTemplate>

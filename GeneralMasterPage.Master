@@ -4,36 +4,36 @@
 
 <html>
 <head runat="server">
-    <title>Movie Database</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Rokkitt" rel="stylesheet" /> 
-    <link href="css/main.css" rel="stylesheet" />
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
+	<title>Movie Database</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto|Rokkitt" rel="stylesheet" /> 
+	<link href="css/main.css" rel="stylesheet" />
+	<asp:ContentPlaceHolder ID="head" runat="server">
+	</asp:ContentPlaceHolder>
 </head>
 <body>
-    <nav id="custom-nav">
-    <div class="burger-icon"><span><i class="fa fa-bars"></i></span></div>
-        <ul id="nav-items">
-            <li><a class="logo" href="Default.aspx">Movies 'N' Stuff</a></li>
-            <li><a href="Default.aspx">Best Rated</a></li>
-            <li><a href="Movies.aspx">Movies</a></li>
-        </ul>
-    </nav>
-    <div class="background-img"></div>
+	<nav id="custom-nav">
+	<div class="burger-icon"><span><i class="fa fa-bars"></i></span></div>
+		<ul id="nav-items">
+			<li><a class="logo" href="Default.aspx">Movies 'N' Stuff</a></li>
+			<li><a href="Default.aspx">Best Rated</a></li>
+			<li><a href="Movies.aspx">Movies</a></li>
+		</ul>
+	</nav>
+	<div class="background-img"></div>
 
-    <form id="MasterPageForm" runat="server">
-        <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">
-            
-            </asp:ContentPlaceHolder>
-        </div>
-    </form>
+	<form id="MasterPageForm" runat="server">
+		<div>
+			<asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">
+			
+			</asp:ContentPlaceHolder>
+		</div>
+	</form>
 
-    <%--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>--%>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
+	<%--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>--%>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
 </body>
 </html>
