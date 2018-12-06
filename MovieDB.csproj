@@ -70,6 +70,7 @@
     <Content Include="css\main.css" />
     <Content Include="Default.aspx" />
     <Content Include="images\bgimg.jpeg" />
+    <Content Include="images\error.jpg" />
     <Content Include="js\main.js" />
     <Content Include="Movies.aspx" />
     <Content Include="Web.config" />
@@ -84,6 +85,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DbUtility.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

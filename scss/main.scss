@@ -25,6 +25,7 @@ $red-color: #FF5252;
 .wrapper {
 	width: 100%;
 	border: 1px solid $grey-color;
+	border-radius: 6px;
 	margin-top: 2em;
 	margin-bottom: 2em;
 	background: $white-color;
@@ -37,7 +38,11 @@ $red-color: #FF5252;
 	}
 }
 
-.view-btn {
+.movies-title {
+	text-align: center;
+}
+
+.view-btn, search-btn {
 	padding: 0.3em 1.5em;
 	border: 1px solid $red-color;
 	background: $red-color;
@@ -45,7 +50,7 @@ $red-color: #FF5252;
 	text-transform: uppercase;
 }
 
-.view-btn:hover, .view-btn:focus {
+.view-btn:hover, .view-btn:focus, .search-btn:hover, search-btn:focus {
 	outline: none;
 	color: $red-color;
 	background: $white-color;
