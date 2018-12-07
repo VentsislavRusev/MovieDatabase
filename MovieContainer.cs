@@ -111,6 +111,7 @@ namespace MovieDB
 		public static List<MovieContainer> MovieByNameAndGenre(int genre, string title)
 		{
 			List<MovieContainer> results = new List<MovieContainer>();
+
 			//@"data source = DESKTOP-DJ7RAJ3; integrated security = true; database = MovieDB" -> Laptop
 			//@"data source = DESKTOP-RGPRP90\THOMASSQL; integrated security = true; database = MovieDB" -> Desktop
 			using (SqlConnection conn = new SqlConnection(@"data source = DESKTOP-RGPRP90\THOMASSQL; integrated security = true; database = MovieDB"))

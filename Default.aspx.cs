@@ -17,6 +17,14 @@ namespace MovieDB
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
+			// Show commercial randomly
+			Random rand = new Random();
+			int rnd = rand.Next(0, 4);
+			Commercials c = new Commercials("C:/Users/thom2/source/repos/Fourth_Handin/xml/commercials.xml", "company");
+			Cmc_lb.Text = c.CommercialInfo()[rnd];
+
+
+			//	private Commercials[] info = commercial.CommercialInfo();
 			// XSLT transform and xml data to DB
 			// DayTimerCall();
 		}

@@ -4,8 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
 	<div class="container">
 		<div class="wrapper">
-
-		<div class="row">
+			<div class="row">
 			<div class="col-xs-12">
 				<table class="table">
 					<thead>
@@ -34,17 +33,9 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-xs-12 col-sm-4 text-center">
-				<p>Company</p>
-				<p>Commercial</p>
+			<div class="col-xs-12 text-center commercial-box">
+				<p><asp:Label ID="Cmc_lb" runat="server"></asp:Label></p>
 			</div>
-						<div class="col-xs-12 col-sm-4 text-center">
-				<p>Company</p>
-				<p>Commercial</p>
-			</div>
-						<div class="col-xs-12 col-sm-4 text-center">
-				<p>Company</p>
-				<p>Commercial</p>
 			</div>
 		</div>
 		</div>

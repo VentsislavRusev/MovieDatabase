@@ -85,6 +85,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commercials.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -75,5 +75,20 @@ img:hover {
 		padding: 5px;
 	}
 }
+
+.commercial-box {
+	height: 5em;
+	border-radius: 6px;
+	background: $black-color;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0 5px 8px 0 rgba(255,82,82, 0.3), 0 7px 20px 0 rgba(255,82,82, 0.3);
+}
+
+.commercial-box p {
+	color: $red-color;
+	text-transform: uppercase;
+}
 @import "responsive.scss";
 

@@ -160,6 +160,21 @@ img:hover {
   padding: 5px;
 }
 
+.commercial-box {
+  height: 5em;
+  border-radius: 6px;
+  background: #212112;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 8px 0 rgba(255, 82, 82, 0.3), 0 7px 20px 0 rgba(255, 82, 82, 0.3);
+}
+
+.commercial-box p {
+  color: #FF5252;
+  text-transform: uppercase;
+}
+
 /* Responsive */
 @media only screen and (max-width: 600px) {
   .burger-icon {

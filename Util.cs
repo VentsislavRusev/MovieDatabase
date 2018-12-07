@@ -12,7 +12,7 @@ namespace MovieDB
 	{
 		private SqlConnection conn;
 
-		private SqlConnection OpenConnection()
+		public SqlConnection OpenConnection()
 		{
 			//string connString = @"data source = DESKTOP-DJ7RAJ3; integrated security = true; database = MovieDB";
 			string connString = @"data source = DESKTOP-RGPRP90\THOMASSQL; integrated security = true; database = MovieDB";
