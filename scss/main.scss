@@ -90,5 +90,9 @@ img:hover {
 	color: $red-color;
 	text-transform: uppercase;
 }
+
+.modal-link {
+	cursor: pointer !important;
+}
 @import "responsive.scss";
 

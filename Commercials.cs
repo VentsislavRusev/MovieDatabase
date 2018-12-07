@@ -12,16 +12,16 @@ namespace MovieDB
 		private static string Xmlfile { get; set; }
 		private static string Xmlfield { get; set; }
 
-		public Commercials(string xml, string field)
+		public Commercials(string xml, string fieldOne)
 		{
 			Xmlfile = xml;
-			Xmlfield = field;
+			Xmlfield = fieldOne;
 		}
 
 		public string[] CommercialInfo()
 		{
 			XElement root = XElement.Load(Xmlfile);
-			string[] descriptions = root.Descendants(Xmlfield).Select(e => e.Value).ToArray();
+			string[] descriptions = root.Descendants(Xmlfield).Select(element => element.Value).ToArray();
 
 			return descriptions;
 		}
