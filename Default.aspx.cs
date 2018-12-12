@@ -17,12 +17,11 @@ namespace MovieDB
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
-			PopulateListView(MovieContainer.DisplayTopTen());
 			// Show Top 10
+			PopulateListView(MovieContainer.DisplayTopTen());
 
 			// Show commercial randomly
 			Cmc_lb.Text = GenerateRandomCommercial();
-
 
 			//	private Commercials[] info = commercial.CommercialInfo();
 			// XSLT transform and xml data to DB
@@ -85,11 +84,12 @@ namespace MovieDB
 		#region method call once a month
 		private static void DayTimerCall()
 		{
-			System.Diagnostics.Debug.Write("WRITE TO THE OUTPUT");
+			//System.Diagnostics.Debug.Write("WRITE TO THE OUTPUT");
 			TransformUsingXslt();
-			
+
 			XmlManipulating manipulate = new XmlManipulating();
 			manipulate.ReadDataToXMLFromOmdb();
+
 		}
 		#endregion
 

@@ -15,8 +15,8 @@ namespace MovieDB
 		public void ReadDataToXMLFromOmdb()
 		{
 			//string ConnString = @"data source = DESKTOP-S37VJ5K\MSSQLSERVER01; integrated security = true; database = MovieDB";
-			//string connString = @"data source = DESKTOP-RGPRP90\THOMASSQL; integrated security = true; database = MovieDB";
-			string connString = @"data source = DESKTOP-DJ7RAJ3; integrated security = true; database = MovieDB";
+			string connString = @"data source = DESKTOP-RGPRP90\THOMASSQL; integrated security = true; database = MovieDB";
+			//string connString = @"data source = DESKTOP-DJ7RAJ3; integrated security = true; database = MovieDB";
 
 			SqlConnection conn = new SqlConnection(connString);
 			SqlCommand cmd = new SqlCommand
@@ -98,8 +98,8 @@ namespace MovieDB
 			updateCmd.Parameters.AddWithValue("@title", title);
 
 			da.UpdateCommand = updateCmd;
-			//da.UpdateCommand.ExecuteNonQuery();
-			da.Update(dt);
+			da.UpdateCommand.ExecuteNonQuery();
+			//da.Update(dt);
 
 			conn.Close();
 		}
