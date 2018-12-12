@@ -4,14 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
 	<div class="container">
 		<div class="wrapper">
-			
-		</div>
-	</div>
-</asp:Content>
-
-	<%--<div class="container">
-		<div class="wrapper">
-				<h1 class="text-center display-header"><asp:Label runat="server" ID="display_lb" ForeColor="#FF5252">Top 10</asp:Label></h1>
+			<h1 class="text-center display-header"><asp:Label runat="server" ID="display_lb" ForeColor="#FF5252">Top 10</asp:Label></h1>
 			<div class="row">
 				<div class="col-xs-12 col-sm-offset-3 col-sm-4">
 					<asp:dropdownlist cssclass="form-control" id="TimeSpanList" runat="server" forecolor="#212121">
@@ -26,19 +19,24 @@
 				</div>
 			</div>
 			<div class="row">	
+				<table class="table">
+					<thead>
+						<th>Title</th>
+						<th>Release Year</th>
+						<th>Rating</th>
+					</thead>
+					<tbody>
 				<asp:ListView ID="TopTenMovies_lw" runat="server">
 					<ItemTemplate>
-						<div class="row">
-							<div class="col-xs-6 col-sm-3">
-								<a class="modal-link">
-        							<td runat="server">
-										<p class="card-text"><asp:Label ID="MovieNameLabel" runat="server" Text='<%# Eval("MovieName") %>' /></p>
-										<p class="card-text"><asp:Label ID="ReleaseYearLabel" runat="server" Text='<%# Eval("ReleaseYear") %>' /></p>
-										<p class="card-text"><asp:Label ID="RatingLabel" runat="server" Text='<%# Eval("Rating") %>' /></p>
-									</td>
-								</a>
-							</div>
-						</div>
+        				<td CssClass="display-table" runat="server">
+							<p class="card-text"><asp:Label ID="MovieNameLabel" runat="server" Text='<%# Eval("MovieName") %>' /></p>
+						</td>
+        				<td CssClass="display-table" runat="server">
+							<p class="card-text"><asp:Label ID="ReleaseYearLabel" runat="server" Text='<%# Eval("ReleaseYear") %>' /></p>
+						</td>
+        				<td CssClass="display-table" runat="server">
+							<p class="card-text"><asp:Label ID="RatingLabel" runat="server" Text='<%# Eval("Rating") %>' /></p>
+						</td>
 					</ItemTemplate>
 					<GroupTemplate>
 						<tr id="itemPlaceholderContainer" runat="server">
@@ -46,6 +44,8 @@
 						</tr>
 					</GroupTemplate>	
 				</asp:ListView>
+				</tbody>
+				</table>
 			</div>
 			<div class="row">
 				<div class="col-xs-12 text-center commercial-box">
@@ -53,4 +53,5 @@
 				</div>
 			</div>
 		</div>
-	</div>--%>
+	</div>
+</asp:Content>

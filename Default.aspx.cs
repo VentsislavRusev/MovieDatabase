@@ -31,31 +31,23 @@ namespace MovieDB
 
 		protected void Filter_btn_Click(object sender, EventArgs e)
 		{
-			int timespan = TopTenMovies_lw.SelectedIndex;
+			int timespan = TimeSpanList.SelectedIndex;
 
-			if (TopTenMovies_lw.SelectedValue != "Select Timespan")
+			if (timespan != 0)
 			{
 				if (timespan == 1)
 				{
 					ClearListView();
-			System.Diagnostics.Debug.Write("THIS IS IT: " + timespan);
-
-
 					PopulateListView(MovieContainer.DisplayTopTenDay());
 				}
-				else if (TopTenMovies_lw.SelectedIndex == 2)
+				else if (timespan == 2)
 				{
 					ClearListView();
-					System.Diagnostics.Debug.Write("THIS IS IT: " + timespan);
-
-
 					PopulateListView(MovieContainer.DisplayTopTenWeek());
 				}
-				else if (TopTenMovies_lw.SelectedIndex == 3)
+				else if (timespan == 3)
 				{
 					ClearListView();
-					System.Diagnostics.Debug.Write("THIS IS IT: " + timespan);
-
 					PopulateListView(MovieContainer.DisplayTopTenMonth());
 				}
 				else

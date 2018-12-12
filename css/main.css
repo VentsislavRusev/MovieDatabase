@@ -76,9 +76,6 @@ nav {
   cursor: pointer; }
 
 /* All the rest */
-.display-header {
-  color: #FF5252 !important; }
-
 img:hover {
   opacity: 0.5; }
 
