@@ -15,8 +15,8 @@ namespace MovieDB
 		public void ReadDataToXMLFromOmdb()
 		{
 			//string ConnString = @"data source = DESKTOP-S37VJ5K\MSSQLSERVER01; integrated security = true; database = MovieDB";
-			string connString = @"data source = DESKTOP-RGPRP90\THOMASSQL; integrated security = true; database = MovieDB";
-			//string connString = @"data source = DESKTOP-DJ7RAJ3; integrated security = true; database = MovieDB";
+			//string connString = @"data source = DESKTOP-RGPRP90\THOMASSQL; integrated security = true; database = MovieDB";
+			string connString = @"data source = DESKTOP-DJ7RAJ3; integrated security = true; database = MovieDB";
 
 			SqlConnection conn = new SqlConnection(connString);
 			SqlCommand cmd = new SqlCommand
@@ -74,13 +74,14 @@ namespace MovieDB
 				}
 
 				// Take each movie property and save in the DB	
-				UpdateDbWithDataFromXml(connString, title, poster, plot, actors, rating);
+				UpdateDbWithDataFromXml(connString, dt, title, poster, plot, actors, rating);
 			}
 		}
 
-		public void UpdateDbWithDataFromXml(string connString, string title, string poster, string plot, string actors, string rating)
+		public void UpdateDbWithDataFromXml(string connString, DataTable dt, string title, string poster, string plot, string actors, string rating)
 		{
 			SqlConnection conn = new SqlConnection(connString);
+
 			SqlDataAdapter da = new SqlDataAdapter();
 			//string sql = "UPDATE Movies SET [PosterUrl] = NULL, [Resume] = NULL, [Actors] = NULL, [Rating] = NULL WHERE [MovieName] = @title";
 			string sql = "spMovies_UpdateColsInDB";
@@ -88,8 +89,8 @@ namespace MovieDB
 			{
 				CommandType = CommandType.StoredProcedure
 			};
-
 			conn.Open();
+
 			updateCmd.Parameters.AddWithValue("@poster", poster);
 			updateCmd.Parameters.AddWithValue("@plot", plot);
 			updateCmd.Parameters.AddWithValue("@actors", actors);
@@ -97,7 +98,8 @@ namespace MovieDB
 			updateCmd.Parameters.AddWithValue("@title", title);
 
 			da.UpdateCommand = updateCmd;
-			da.UpdateCommand.ExecuteNonQuery();
+			//da.UpdateCommand.ExecuteNonQuery();
+			da.Update(dt);
 
 			conn.Close();
 		}
