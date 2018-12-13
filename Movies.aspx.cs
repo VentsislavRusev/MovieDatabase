@@ -64,5 +64,13 @@ namespace MovieDB
 			MovieList_lw.DataSource = null;
 			MovieList_lw.DataBind();
 		}
+
+		public void SingleMovie_Click(object sender, EventArgs args)
+		{
+			var href = ((System.Web.UI.HtmlControls.HtmlAnchor)sender).HRef;
+			Session["value"] = href;
+
+			System.Diagnostics.Debug.Write("WRITE TO THE OUTPUT " + Session["value"]);
+		}
 	}
 }
