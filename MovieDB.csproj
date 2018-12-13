@@ -73,6 +73,7 @@
     <Content Include="images\error.jpg" />
     <Content Include="js\main.js" />
     <Content Include="Movies.aspx" />
+    <Content Include="SingleMovie.aspx" />
     <Content Include="Web.config" />
     <Content Include="xml\commercials.xml">
       <SubType>Designer</SubType>
@@ -110,6 +111,13 @@
     <Compile Include="ApiTokens.cs" />
     <Compile Include="MovieContainer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SingleMovie.aspx.cs">
+      <DependentUpon>SingleMovie.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SingleMovie.aspx.designer.cs">
+      <DependentUpon>SingleMovie.aspx</DependentUpon>
+    </Compile>
     <Compile Include="TransformXslt.cs" />
     <Compile Include="Util.cs" />
     <Compile Include="XmlManipulating.cs" />

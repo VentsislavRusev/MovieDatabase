@@ -16,6 +16,7 @@ namespace MovieDB
 		protected void Page_Load(object sender, EventArgs e)
 		{
 			PopulateListView(MovieContainer.MovieInfo());
+			Session.Clear();
 		}
 
 		protected void Search_btn_Click(object sender, EventArgs e)
@@ -69,8 +70,7 @@ namespace MovieDB
 		{
 			var href = ((System.Web.UI.HtmlControls.HtmlAnchor)sender).HRef;
 			Session["value"] = href;
-
-			System.Diagnostics.Debug.Write("WRITE TO THE OUTPUT " + Session["value"]);
+			Response.Redirect("SingleMovie.aspx");
 		}
 	}
 }
