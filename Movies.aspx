@@ -6,7 +6,7 @@
 		<div class="wrapper">
 			<div class="row">
 				<div class="col-xs-12 col-sm-offset-2 col-sm-2">
-					<asp:DropDownList CssClass="form-control" ID="Genrelist" runat="server" ForeColor="#212121">
+					<asp:DropDownList CssClass="form-control" AlternateText="Genre dropdownlist" ID="Genrelist" runat="server" ForeColor="#212121">
 						<asp:ListItem Enabled="true" Text="Select Genre" Value="Select Genre"></asp:ListItem>
 						<asp:ListItem Text="Action" Value="Action"></asp:ListItem>
 						<asp:ListItem Text="Animation" Value="Animation"></asp:ListItem>
@@ -15,10 +15,10 @@
 					</asp:DropDownList>
 				</div>
 				<div class="col-xs-12 col-sm-4">
-					<asp:TextBox CssClass="form-control" runat="server" ID="Moviename_tb" ForeColor="#212121"></asp:TextBox>
+					<asp:TextBox CssClass="form-control" AlternateText="Textbox for movietitles" runat="server" ID="Moviename_tb" ForeColor="#212121"></asp:TextBox>
 				</div>
 				<div class="col-xs-12 col-sm-2">
-					<asp:Button ID="Search_btn" runat="server" ForeColor="#ffffff" Text="SEARCH" CssClass="btn btn-danger" OnClick="Search_btn_Click" />
+					<asp:Button ID="Search_btn" AlternateText="Button to search by genre and title" runat="server" ForeColor="#ffffff" Text="SEARCH" CssClass="btn btn-danger" OnClick="Search_btn_Click" />
 				</div>
 			</div>
 			<div class="row text-center">
@@ -30,7 +30,7 @@
 									<div class="card">
 										<td runat="server">
 											<asp:Image CssClass="card-img-top" ID="PosterUrlLabel" runat="server" ImageUrl='<%# Bind("Poster") %>' AlternateText="Movieposter" Height="22.5em" Width="100%"/>
-											<a href='<%# Eval("MovieName") %>' runat="server" onserverclick="SingleMovie_Click"><p class="card-text"><asp:Label ID="MovieNameLabel" runat="server" Text='<%# Eval("MovieName") %>' /></p></a>
+											<a href='<%# Eval("Title") %>' runat="server" onserverclick="SingleMovie_Click"><p class="card-text"><asp:Label ID="MovieNameLabel" runat="server" Text='<%# Eval("Title") %>' /></p></a>
 										</td>
 									</div>
 								</a>
