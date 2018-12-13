@@ -30,7 +30,9 @@
                 <asp:ListView ID="TopTenMovies_lw" runat="server">
                     <ItemTemplate>
                         <td CssClass="display-table" runat="server">
+
                             <p class="card-text"><asp:Label AlternateText="Moviename" ID="MovieNameLabel" runat="server" Text='<%# Eval("Title") %>' /></p>
+
                         </td>
                         <td CssClass="display-table" runat="server">
                             <p class="card-text"><asp:Label AlternateText="Movie release year" ID="ReleaseYearLabel" runat="server" Text='<%# Eval("ReleaseYear") %>' /></p>
