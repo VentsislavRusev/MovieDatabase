@@ -21,13 +21,15 @@ namespace MovieDB
 			return conn;
 		}
 
-		public SqlDataAdapter GetAdapter(string query)
+		public SqlDataAdapter GetAdapter(string query, string movie)
 		{
 			SqlCommand cmd = new SqlCommand(query)
 			{
 				CommandType = CommandType.StoredProcedure,
 				Connection = OpenConnection()
 			};
+
+			cmd.Parameters.AddWithValue("@title", movie);
 
 			SqlDataAdapter da = new SqlDataAdapter(cmd);
 			DataTable dt = new DataTable();
@@ -36,17 +38,17 @@ namespace MovieDB
 			return da;
 		}
 
-		public SqlDataReader GetReader(string query)
-		{
-			SqlCommand cmd = new SqlCommand(query)
-			{
-				CommandType = CommandType.StoredProcedure,
-				Connection = OpenConnection()
-			};
+		//public SqlDataReader GetReader(string query)
+		//{
+		//	SqlCommand cmd = new SqlCommand(query)
+		//	{
+		//		CommandType = CommandType.StoredProcedure,
+		//		Connection = OpenConnection()
+		//	};
 
-			SqlDataReader rdr = cmd.ExecuteReader();
-			return rdr;
-		}
+		//	SqlDataReader rdr = cmd.ExecuteReader();
+		//	return rdr;
+		//}
 
 		public void CloseConnection()
 		{

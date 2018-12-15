@@ -29,8 +29,8 @@
 								<a class="modal-link">
 									<div class="card">
 										<td runat="server">
-											<asp:Image CssClass="card-img-top" ID="PosterUrlLabel" runat="server" ImageUrl='<%# Bind("Poster") %>' AlternateText="Movieposter" Height="22.5em" Width="100%"/>
-											<a href='<%# Eval("Title") %>' runat="server" onserverclick="SingleMovie_Click"><p class="card-text"><asp:Label ID="MovieNameLabel" runat="server" Text='<%# Eval("Title") %>' /></p></a>
+											<a href='<%# Eval("Title") %>' runat="server" onserverclick="SingleMovie_Click"><asp:Image CssClass="card-img-top" ID="PosterUrlLabel" runat="server" ImageUrl='<%# Bind("Poster") %>' AlternateText="Movieposter" Height="22.5em" Width="100%"/>
+											<p class="card-text"><asp:Label ID="MovieNameLabel" runat="server" Text='<%# Eval("Title") %>' /></p></a>
 										</td>
 									</div>
 								</a>
