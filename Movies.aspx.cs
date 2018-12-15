@@ -62,7 +62,7 @@ namespace MovieDB
 			Session["value"] = href;
 
 			// Insert timestamp of clicked movie into DetailedViews
-			using (SqlConnection conn = new SqlConnection(@"data source = DESKTOP-DJ7RAJ3; integrated security = true; database = MovieDB"))
+			using (SqlConnection conn = new SqlConnection(@"data source = DESKTOP-RGPRP90\THOMASSQL; integrated security = true; database = MovieDB"))
 			{
 				//string query = "SELECT Movies.MovieName, Movies.TrailerUrl, Movies.Resume, Movies.Actors, Movies.Rating, Movies.Genre FROM Movies WHERE Movies.MovieName = '" + movie + "'";
 				string query = "spMovies_UpdateDetailedViews";
