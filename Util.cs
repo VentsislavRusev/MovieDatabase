@@ -14,8 +14,8 @@ namespace MovieDB
 
 		public SqlConnection OpenConnection()
 		{
-			string connString = @"data source = DESKTOP-DJ7RAJ3; integrated security = true; database = MovieDB";
-			//string connString = @"data source = DESKTOP-RGPRP90\THOMASSQL; integrated security = true; database = MovieDB";
+		//	string connString = @"data source = DESKTOP-DJ7RAJ3; integrated security = true; database = MovieDB";
+			string connString = @"data source = DESKTOP-RGPRP90\THOMASSQL; integrated security = true; database = MovieDB";
 			conn = new SqlConnection(connString);
 			conn.Open();
 			return conn;

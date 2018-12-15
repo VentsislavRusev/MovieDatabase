@@ -7,7 +7,7 @@ namespace MovieDB
 {
 	public class ApiTokens
 	{
-		public static string omdb = "670e75a5";
-		public static string youtube = "ATIHzOaMSAySDeDnEN7bT0vTGRRSzNoHnJ4-EE0SiKQ78";
+		public static string omdb = "xxx";
+		public static string youtube = "xxx-xxx";
 	}
 }
