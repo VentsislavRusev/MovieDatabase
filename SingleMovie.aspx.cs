@@ -22,6 +22,22 @@ namespace MovieDB
 			}
 		}
 
+		public void Opinion_Click(object sender, EventArgs args)
+		{
+			LikesAndDislikes lad = new LikesAndDislikes(Session["value"].ToString());
+			Button btn = sender as Button;
+			if ((sender as Button).Text == "LIKE")
+			{
+				lad.LikeIncrement();
+				PopulateListView(MovieContainer.GetSpecificMovieInfo(Session["value"].ToString()));
+			}
+			else
+			{
+				lad.DislikeIncrement();
+				PopulateListView(MovieContainer.GetSpecificMovieInfo(Session["value"].ToString()));
+			}
+		}
+
 		public void PopulateListView(List<MovieContainer> data)
 		{
 			List<MovieContainer> MovieInfoList = data;
@@ -29,7 +45,6 @@ namespace MovieDB
 			SingleMovie_lw.DataSource = MovieInfoList;
 			SingleMovie_lw.DataBind();
 		}
-
 	}
 }
 		

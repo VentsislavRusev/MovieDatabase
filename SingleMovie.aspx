@@ -1,13 +1,12 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/GeneralMasterPage.Master" AutoEventWireup="true" CodeBehind="SingleMovie.aspx.cs" Inherits="MovieDB.SingleMovie" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/GeneralMasterPage.Master" AutoEventWireup="true" CodeBehind="SingleMovie.aspx.cs" Inherits="MovieDB.SingleMovie" EnableEventValidation="false" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
 <div class="container">
 		<div class="wrapper">
 			<div class="row">
-				<form id="MovieForm">
+				<%--<form id="MovieForm">--%>
 					<div class="row">
-						<asp:Label ID="msg_lb" runat="server"></asp:Label>
 						<asp:ListView ID="SingleMovie_lw" runat="server">
 							<ItemTemplate>
 								<div class="column">
@@ -41,8 +40,12 @@
 													</div>
 												</div>
 												<div class="row">
-													<asp:Button runat="server" ID="Like_btn" Text="LIKE" CssClass="btn btn-success" />
-													<asp:Button runat="server" ID="Dislike_btn" Text="DISLIKE" CssClass="btn btn-danger" />
+													<asp:Button runat="server" ID="Like_btn" Text="LIKE" CssClass="btn btn-success" OnClick="Opinion_Click" />
+													<asp:Button runat="server" ID="Dislike_btn" Text="DISLIKE" CssClass="btn btn-danger" OnClick="Opinion_Click" />
+												</div>
+												<div class="row">
+													<p>Likes: <asp:Label runat="server" Text='<%# Eval("Likes") %>' ID="Like_lb" /></p>
+													<p>Dislikes: <asp:Label runat="server" Text='<%# Eval("Dislikes") %>' ID="Dislike_lb" /></p>
 												</div>
 											</td>
 										</div>
@@ -56,7 +59,7 @@
 							</GroupTemplate>
 						</asp:ListView>
 					</div>
-				</form>
+				<%--</form>--%>
 			</div>
 		</div>
 	</div>

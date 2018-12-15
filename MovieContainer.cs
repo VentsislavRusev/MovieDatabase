@@ -11,6 +11,9 @@ namespace MovieDB
 {
 	public class MovieContainer
 	{
+		// Util class
+		Util dbConn = new Util();
+		
 		// Properties
 		public string Title { get; set; }
 		public string Poster { get; set; }
@@ -21,9 +24,11 @@ namespace MovieDB
 		public string Actors { get; set; }
 		public int Genre { get; set; }
 		public object SingleMovie { get; set; } = HttpContext.Current.Session["value"];
+		public int Likes { get; set; }
+		public int Dislikes { get; set; }
 
 		// Constructors
-		public MovieContainer(string movie, string trailer, string resume, string actors, string rating, int genre)
+		public MovieContainer(string movie, string trailer, string resume, string actors, string rating, int genre, int likes, int dislikes)
 		{
 			SingleMovie = movie;
 			Trailer = trailer;
@@ -31,6 +36,8 @@ namespace MovieDB
 			Actors = actors;
 			Rating = rating;
 			Genre = genre;
+			Likes = likes;
+			Dislikes = dislikes;
 		}
 		public MovieContainer(string movie, string poster)
 		{
@@ -51,8 +58,8 @@ namespace MovieDB
 			using (SqlConnection conn = new SqlConnection(@"data source = DESKTOP-DJ7RAJ3; integrated security = true; database = MovieDB"))
 			{
 				//string query = "SELECT Movies.MovieName, Movies.TrailerUrl, Movies.Resume, Movies.Actors, Movies.Rating, Movies.Genre FROM Movies WHERE Movies.MovieName = '" + movie + "'";
-				string query = "spMovies_SingleMovie";
 				conn.Open();
+				string query = "spMovies_SingleMovie";
 				SqlCommand cmd = new SqlCommand
 				{
 					Connection = conn,
@@ -70,7 +77,7 @@ namespace MovieDB
 				{
 					if (movie == (string)row["MovieName"])
 					{
-						results.Add(new MovieContainer(row["MovieName"].ToString(), row["TrailerUrl"].ToString(), row["Resume"].ToString(), row["Actors"].ToString(), row["Rating"].ToString(), Convert.ToInt32(row["Genre"])));
+						results.Add(new MovieContainer(row["MovieName"].ToString(), row["TrailerUrl"].ToString(), row["Resume"].ToString(), row["Actors"].ToString(), row["Rating"].ToString(), Convert.ToInt32(row["Genre"]), Convert.ToInt32(row["Likes"]), Convert.ToInt32(row["Dislikes"])));
 					}
 					break;
 				}

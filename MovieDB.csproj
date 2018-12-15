@@ -101,6 +101,7 @@
     <Compile Include="GeneralMasterPage.Master.designer.cs">
       <DependentUpon>GeneralMasterPage.Master</DependentUpon>
     </Compile>
+    <Compile Include="LikesAndDislikes.cs" />
     <Compile Include="Movies.aspx.cs">
       <DependentUpon>Movies.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
